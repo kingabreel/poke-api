@@ -13,7 +13,6 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.nomeDoServico.getData().subscribe(data => {
-      console.log(data)
     })
   }
 }
