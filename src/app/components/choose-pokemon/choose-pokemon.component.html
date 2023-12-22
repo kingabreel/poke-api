@@ -1,5 +1,9 @@
 <div class="carroussel">
     <div class="poke-card" *ngFor="let pokemon of pokemons">
-        <p>{{ pokemon.name }}</p>
+        <app-pokemon-card name="{{ pokemon.name }}"
+        [abilities]="pokemon.abilities"
+        [sprite]="pokemon.sprites"
+        [stats]="pokemon.stats"
+        [type]="pokemon.type"></app-pokemon-card>
     </div>
 </div>

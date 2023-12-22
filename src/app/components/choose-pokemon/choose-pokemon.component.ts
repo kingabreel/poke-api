@@ -13,7 +13,18 @@ export class ChoosePokemonComponent {
 
   ngOnInit(): void {
     this.pokeClient.getData().subscribe(data => {
-      this.pokemons = data.results;
+      let pokemonsUrl = data.results;
+      this.getPokeInfo(pokemonsUrl);
     })
-  }  
+  }
+
+  getPokeInfo(poke: any[]){
+    
+    for(let i = 1; i <= poke.length; i++){
+      this.pokeClient.getSpecificPokemon(i).subscribe(data => {
+        this.pokemons.push(data);
+      })
+    }
+    console.log(this.pokemons)
+  }
 }

@@ -16,6 +16,9 @@ export class PokeClientService {
 
   getPikachu(): Observable<any> {
     return this.http.get<any>(`${this.apiURL}pikachu`)
+  }
 
+  getSpecificPokemon(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiURL}${id}`)
   }
 }
