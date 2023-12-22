@@ -1,4 +1,7 @@
-<div class="container">
-    <h1 (click)="clicked()">{{ name }}</h1>
-    <img [src]="sprite && sprite.front_default ? sprite.front_default : ''" alt="">
+<div class="container" [ngClass]="pokeColor">
+    <h1>{{ name }}</h1>
+    <img [src]="sprite && sprite.front_default ? sprite.front_default : ''">
+    <div class="stats">
+        <p *ngFor="let stat of stats">{{ stat.stat.name }}: {{ stat.base_stat }}</p>
+    </div>
 </div>

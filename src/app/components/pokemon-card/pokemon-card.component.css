@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    height: 370px;
+}
+
+.container > img {
+    width: 240px;
+    height: 240px;
+}
+
+.gray {
+    background-color: rgb(170, 155, 155);
+}
+
+.green {
+    background-color: rgb(28, 218, 28);
+}
+
+.blue {
+    background-color: rgb(41, 41, 206);
+}
+
+.red {
+    background-color: rgb(255, 51, 0);
+}
