@@ -19,7 +19,6 @@ export class ChoosePokemonComponent {
   }
 
   getPokeInfo(poke: any[]){
-    
     for(let i = 1; i <= poke.length; i++){
       this.pokeClient.getSpecificPokemon(i).subscribe(data => {
         this.pokemons.push(data);

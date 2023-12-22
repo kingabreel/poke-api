@@ -1,0 +1,7 @@
+.carroussel {
+    display: flex;
+    gap: 15px;
+    width: 55vw;
+    height: 70vh;
+    align-items: center;
+}

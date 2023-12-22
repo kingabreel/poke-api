@@ -11,11 +11,7 @@ export class PokeClientService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get<any>(`${this.apiURL}`)
-  }
-
-  getPikachu(): Observable<any> {
-    return this.http.get<any>(`${this.apiURL}pikachu`)
+    return this.http.get<any>(`${this.apiURL}?offset=0&limit=9`)
   }
 
   getSpecificPokemon(id: number): Observable<any> {
